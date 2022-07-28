@@ -7,7 +7,7 @@
     <title>Title</title>
 </head>
 <body bgcolor="#add8e6">
-<center><h1>Student Details</h1></center>
+<center><h1>Student Results</h1></center>
 <!--<Div><img style="background-size: cover; background-position: center; background-attachment: fixed; margin-bottom: -380px; height: 550px; width: 100%;"  src="{% static 'student-management.jpg' %}" alt="My image"></div>-->
 <form class="form-inline my-2 my-lg-0 " align="center" style="background-position: right">
     <input class="form-control mr-sm-2 " style="background-color: snow" name="q" type="search" placeholder="Search" aria-label="Search">
@@ -15,9 +15,9 @@
 </form>
 
 <table border="1"  align="center" bgcolor="#fffaf0" style="border: solid">
-    <tr style="background-color: darkgray"><th>StudentId</th><th>StudentName</th><th>Phone</th><th>Email</th><th>DateOfBirth</th><th>Graduation</th><th>YearOfPass</th><th>BatchName</th></tr>
+    <tr style="background-color: darkgray"><th>StudentId</th><th>StudentName</th><th>Subject1</th><th>Subject2</th><th>Subject3</th><th>Subject4</th><th>Subject5</th><th>Subject6</th><th>Total</th></tr>
     {% for rec in records %}
-    <tr><td>{{ rec.StudentId}}</td><td>{{ rec.StudentName}}</td><td>{{ rec.Phone}}</td><td>{{ rec.Email}}</td><td>{{ rec.DateOfBirth}}</td><td>{{ rec.Graduation}}</td><td>{{ rec.YearOfPass}}</td><td>{{ rec.BatchName}}</td></tr>
+    <tr><td>{{ rec.StudentId1 }}</td><td>StudentName</td><td>{{ rec.Subject1}}</td><td>{{ rec.Subject2}}</td><td>{{ rec.Subject3}}</td><td>{{ rec.Subject4}}</td><td>{{ rec.Subject5}}</td><td>{{ rec.Subject6}}</td><td>{{ rec.Total }}</td></tr>
     {%  endfor %}
 </table>
 </body>

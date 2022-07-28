@@ -58,6 +58,10 @@ class DisplayView(View):
         con_dic={"records":qs}
         return render(request,"display.html",con_dic)
 
+class DisplayresultView(View):
+    def get(self,request):
+        return render(request,"Displayresult.html")
+
 class UpdateInputView(View):
     def get(self,request):
         return render(request,"updateinput.html")
@@ -95,6 +99,30 @@ class DeleteView(View):
         Student.delete()
         resp = HttpResponse("Student deleted successfully")
         return resp
+
+class ResultInput(View):
+    def get(self,request):
+        return render(request, 'resultinput.html')
+class ResultView(View):
+    def get(self,request):
+        #Student_Id = int(request.POST["t1"])
+        Student_Name = request.GET["t2"]
+        Subject1 = request.GET["t3"]
+        Subject2 = request.GET["t4"]
+        Subject3 = request.GET["t5"]
+        Subject4 = request.GET["t6"]
+        Subject5 = request.GET["t7"]
+        Subject6 = request.GET["t8"]
+        Total = request.GET["t9"]
+
+        s=Results(StudentName=Student_Name,sub1=Subject1,sub2=Subject2,sub3=Subject3,sub4=Subject4,sub5=Subject5,sub6=Subject6,Total=Total)
+        s.save()
+        resp=HttpResponse("Student result inserted successfully")
+        return resp
+
+
+
+
 
 
 

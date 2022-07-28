@@ -7,27 +7,28 @@
 <div >
 <Div><img style="background-size: cover; background-position: center; background-attachment: fixed; margin-bottom: -380px; height: 550px; width: 100%;"  src="{% static 'student-management.jpg' %}" alt="My image"></div>
 <br>
-<h1 class="text-center text-white"><u>Admin Login</u></h1><br>
-<p class=" text-white"><b>Note:</b> Only the admin can login from here.</p>
+<h1 class=" text-center text-white"><u>Admin Login</u></h1><br>
+    <center>
+<p class=" text-black"><b>Note:</b> Only the admin can login from here.</p></center>
     <form method="POST"> {% csrf_token %}
 
     <div class="row">
-        <div class="span2 well col-lg-5">
-            <label><i style="font-weight: bold; color: white">Username</i></label>
-            <input type="text" class="form-control " name="username" placeholder="Enter Username" required>
+        <div class="span2 well col-lg-5" style="margin-left: 600px">
+            <label><i style="font-weight: bold; color: black">Username</i></label>
+            <input type="text" class="form-control-static " name="username" placeholder="Enter Username" required>
         </div>
     </div>
 
     <div class="row mt-4">
-        <div class="span2 well col-lg-5">
-            <label><i style="font-weight: bold; color: white">Password</i></label>
-            <input type="password" class="form-control mt-2" name="password" placeholder="Enter Password" required>
+        <div class="span2 well col-lg-5" style="margin-left: 600px">
+            <label><i style="font-weight: bold; color:black">Password</i></label>
+            <input type="password" class="form-control-static" name="password" placeholder="Enter Password" required>
         </div>
-    </div>
+    </div><br>
 
-    <button type="submit" class="btn btn-outline-primary bg-danger">Login</button><br>
-        <a href="/change_password">change password</a><br>
-</div>
+    <button type="submit" class="btn btn-outline-black bg-success" style="margin-left: 720px">Login</button><br>
+
+</div></form>
 
 {% endblock %}
 {% block js %}

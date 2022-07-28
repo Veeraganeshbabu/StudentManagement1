@@ -14,3 +14,8 @@ class addDetailsform(ModelForm):
     class Meta:
         model = Details
         fields = "__all__"
+
+class addResultsform(ModelForm):
+    class Meta:
+        model = Results
+        fields = "__all__"

@@ -31,5 +31,8 @@ urlpatterns = [
     path('insertinput/',InsertInput.as_view()),
     path('insertinput/insert/',InserView.as_view()),
     path('display/',DisplayView.as_view()),
+    path('resultinput/insert/',ResultInput.as_view()),
+    path('resultinput/',ResultView.as_view()),
+    path('Displayresult/',DisplayresultView.as_view())
 
 ]
